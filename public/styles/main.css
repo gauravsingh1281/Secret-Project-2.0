@@ -13,11 +13,22 @@ body {
   padding-bottom: 2rem;
   box-sizing: border-box;
 }
+
 h1 {
   color: white;
   font-family: "Titan One", cursive;
   margin-bottom: 20px;
 }
+
+button {
+  color: red;
+  font-family: "Titan One", cursive;
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
 .card {
   background: url("../images/whisper-img.jpg");
   background-size: cover;
@@ -41,6 +52,7 @@ h1 {
   color: rgb(88 199 250 / 100%);
   transition: color 1s;
 }
+
 .card:hover:before,
 .card:hover:after {
   animation: none;
@@ -52,12 +64,10 @@ h1 {
   width: 104%;
   height: 102%;
   border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate),
-    #5ddcff,
-    #3c67e3 43%,
-    #4e00c2
-  );
+  background-image: linear-gradient(var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2);
   position: absolute;
   z-index: -1;
   top: -1%;
@@ -77,16 +87,15 @@ h1 {
   margin: 0 auto;
   transform: scale(0.8);
   filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate),
-    #5ddcff,
-    #3c67e3 43%,
-    #4e00c2
-  );
+  background-image: linear-gradient(var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2);
   opacity: 1;
   transition: opacity 0.5s;
   animation: spin 2.5s linear infinite;
 }
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
@@ -97,6 +106,7 @@ h1 {
   0% {
     --rotate: 0deg;
   }
+
   100% {
     --rotate: 360deg;
   }

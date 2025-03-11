@@ -15,12 +15,13 @@
   <h1>What's your secret?</h1>
   <div class="card">
     <p>
-      <%= secret %>
+      <%= data.secret %>
     </p>
   </div>
   <p class="user">
-    <%= user %>
+    <%= data.username %>
   </p>
+  <button onclick="location.reload()">Reveal Another Secret</button>
 </body>
 
 </html>
